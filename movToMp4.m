@@ -23,7 +23,7 @@ RCT_EXPORT_METHOD(convertMovToMp4: (NSString*)filename
 
     AVAssetExportSession *exportSession = [[AVAssetExportSession alloc] initWithAsset:avAsset presetName:AVAssetExportPresetMediumQuality];
 
-    NSString * resultPath = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@.mp4", outputPath];
+    NSString * resultPath = outputPath;
 
     exportSession.outputURL = [NSURL fileURLWithPath:resultPath];
 
